@@ -1,0 +1,390 @@
+/* ==========================================================================
+   NutriCheck Module-Specific Styles
+   Source Code Explorer, Database Schemas, API Viewers & Presentation Deck
+   ========================================================================== */
+
+/* ==========================================================================
+   1. SOURCE CODE EXPLORER COMPONENT
+   ========================================================================== */
+.code-explorer-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin: 28px 0;
+  min-height: 650px;
+}
+
+.file-tree-pane {
+  background-color: var(--bg-card);
+  border-right: 1px solid var(--border-color);
+  padding: 18px 12px;
+  overflow-y: auto;
+}
+
+.file-tree-header {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  padding: 0 8px 12px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 12px;
+}
+
+.tree-folder {
+  margin-bottom: 8px;
+}
+
+.tree-folder-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.tree-folder-title:hover {
+  color: var(--text-white);
+}
+
+.tree-folder-items {
+  padding-left: 18px;
+  border-left: 1px solid var(--border-color);
+  margin-left: 14px;
+}
+
+.tree-file-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-bottom: 2px;
+}
+
+.tree-file-item:hover {
+  background-color: var(--bg-elevated);
+  color: var(--text-white);
+}
+
+.tree-file-item.active {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--accent-emerald-light);
+  font-weight: 700;
+}
+
+.code-viewer-pane {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-black);
+  overflow: hidden;
+}
+
+.code-viewer-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: var(--bg-dark);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.active-file-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.active-file-name {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.active-file-badge {
+  font-size: 0.68rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: rgba(16, 185, 129, 0.12);
+  color: var(--accent-emerald);
+  font-weight: 700;
+}
+
+.code-annotation-banner {
+  padding: 14px 20px;
+  background-color: rgba(59, 130, 246, 0.08);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  font-size: 0.85rem;
+  color: #BFDBFE;
+}
+
+.code-annotation-banner strong {
+  color: #60A5FA;
+}
+
+.code-content-wrap {
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  line-height: 1.65;
+  color: #E2E8F0;
+  white-space: pre;
+}
+
+/* Syntax Highlighting Tokens */
+.syn-keyword { color: #F43F5E; font-weight: 700; }
+.syn-class { color: #38BDF8; font-weight: 700; }
+.syn-fun { color: #A78BFA; font-weight: 700; }
+.syn-string { color: #34D399; }
+.syn-num { color: #FBBF24; }
+.syn-comment { color: #64748B; font-style: italic; }
+
+/* ==========================================================================
+   2. DATABASE SCHEMA VIEWER
+   ========================================================================== */
+.schema-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin: 28px 0;
+}
+
+.schema-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.schema-box-header {
+  padding: 14px 18px;
+  background-color: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.schema-entity-name {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.schema-key-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--accent-emerald);
+}
+
+.schema-fields-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+.schema-fields-table th {
+  text-align: left;
+  padding: 8px 16px;
+  background-color: var(--bg-dark);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.schema-fields-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.schema-fields-table tr:last-child td {
+  border-bottom: none;
+}
+
+.field-name {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+.field-type {
+  font-family: var(--font-mono);
+  color: var(--accent-blue);
+  font-size: 0.78rem;
+}
+
+/* ==========================================================================
+   3. API CONTRACT VIEWER
+   ========================================================================== */
+.api-spec-card {
+  background-color: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.api-method-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.method-badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.method-get { background-color: rgba(59, 130, 246, 0.15); color: #60A5FA; border: 1px solid rgba(59, 130, 246, 0.3); }
+.method-post { background-color: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+.api-url {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-white);
+  word-break: break-all;
+}
+
+.api-payload-box {
+  background-color: var(--bg-black);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #CBD5E1;
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   4. PRESENTATION MASTER SLIDES DECK
+   ========================================================================== */
+.slide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.slide-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.slide-card:hover {
+  border-color: var(--accent-emerald);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.slide-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.slide-num {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--accent-emerald);
+}
+
+.slide-timing {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background-color: var(--bg-elevated);
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.slide-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 10px;
+}
+
+.slide-points {
+  list-style: none;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.slide-points li {
+  margin-bottom: 8px;
+  padding-left: 14px;
+  position: relative;
+}
+
+.slide-points li::before {
+  content: "•";
+  color: var(--accent-emerald);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.slide-speech-box {
+  background-color: var(--bg-dark);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 0.82rem;
+  color: #94A3B8;
+  border-left: 2px solid var(--accent-emerald);
+}
+
+.slide-speech-box strong {
+  color: var(--accent-emerald-light);
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 900px) {
+  .code-explorer-container {
+    grid-template-columns: 1fr;
+  }
+  .file-tree-pane {
+    max-height: 200px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+}

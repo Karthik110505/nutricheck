@@ -1,0 +1,77 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 1. Corner Scanning Brackets (Slate Gray) -->
+    <path
+        android:strokeColor="#475569"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 22,32 L 22,22 L 32,22
+                          M 76,22 L 86,22 L 86,32
+                          M 22,76 L 22,86 L 32,86
+                          M 86,76 L 86,86 L 86,76" />
+
+    <!-- 2. Stylized N Left vertical stem (Gradients from Emerald to Mint) -->
+    <path
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M 38,70 L 38,38">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="38"
+                android:startY="70"
+                android:endX="38"
+                android:endY="38"
+                android:type="linear">
+                <item android:color="#10B981" android:offset="0.0" />
+                <item android:color="#34D399" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 3. Stylized N Right vertical stem -->
+    <path
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M 70,70 L 70,38">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="70"
+                android:startY="70"
+                android:endX="70"
+                android:endY="38"
+                android:type="linear">
+                <item android:color="#34D399" android:offset="0.0" />
+                <item android:color="#10B981" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 4. Stylized N Diagonal stem -->
+    <path
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M 38,38 L 70,70">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="38"
+                android:startY="38"
+                android:endX="70"
+                android:endY="70"
+                android:type="linear">
+                <item android:color="#10B981" android:offset="0.0" />
+                <item android:color="#34D399" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 5. Stylized Leaf in Negative space (Top Right) -->
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M 54,43 Q 66,38 72,26 Q 59,26 54,43 Z" />
+</vector>
